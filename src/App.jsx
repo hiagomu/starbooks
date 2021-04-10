@@ -4,6 +4,7 @@ import ListPromos from './components/ListPromos';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './styles/base/_base.css'
 import Rodape from './components/rodape';
+import Promo from './components/Promo';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <ListPromos />
+          </Route>
+          <Route path='/promocoes/:id'>
+            <Promo />
           </Route>
         </Switch>
         <Rodape />

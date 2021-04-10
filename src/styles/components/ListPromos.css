@@ -9,6 +9,11 @@ main {
     margin-bottom: 50px;
 }
 
+.promo-item {
+    text-decoration: none;
+    cursor: default;
+}
+
 article {
 
     display: flex;

@@ -1,0 +1,102 @@
+.container-promo {
+    display: flex;
+
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 60px 20px;
+
+    border-radius: 10px;
+}
+
+
+.column-1 {
+    width: 20%;
+}
+
+.column-1 img {
+    width: 200px;
+    height: 320px;
+
+    object-fit: cover;
+}
+
+.column-1 ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.column-1 li {
+    font-size: 18px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.column-2 {
+    display: grid;
+    grid-template-rows: 1fr 60px;
+    width: 60%;
+}
+
+.column-2 h2 {
+    font-size: 40px;
+    color: gold;
+
+
+    margin-bottom: 5px;
+}
+
+.column-2 h3 {
+    font-size: 30px;
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+.column-2 p {
+    font-size: 18px;
+    color: white;
+}
+
+.column-2 .container-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    
+    margin-top: 20px;
+}
+
+.column-2 .container-buttons .promo-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+
+    transition: background-color linear 0.2s;
+}
+
+.column-2 .container-buttons .promo-button:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.column-3 {
+    width: 10%;
+    color: gold;
+}
+
+.column-3 .rating{
+    display: block;
+    text-align: start;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.column-3 .preco{
+    display: block;
+    text-align: start;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
