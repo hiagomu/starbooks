@@ -12,7 +12,7 @@ function ListPromos() {
     }, [])
 
     return(
-        <main>
+        <main className="container-promocoes">
             {promos.map((promo) => (
                 <Link
                     to={`/promocoes/${promo.id}`}

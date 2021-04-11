@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
 nav {
     width: 100%;
     height: 40px;
@@ -5,6 +7,37 @@ nav {
 
     display: flex;
     align-items: center;
+
+    font-family: Poppins;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+.container-nav span {
+    color: gold;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.img-logo-nav {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 5px 0 20px;
+}
+
+
+
+.img-logo {
+    width: 42px;
+    height: 42px;
+
+    margin-right: 20px;
 }
 
 h1 {
@@ -12,6 +45,7 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
+    font-family: Poppins;
 
     margin: 30px 0;
 }

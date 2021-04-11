@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
 .container-promo {
     display: flex;
 
+    font-family: Poppins;
+
     background-color: rgba(51, 51, 51, 0.7);
     padding: 60px 20px;
+    width: 80%;
 
     border-radius: 10px;
 }
@@ -60,7 +65,7 @@
 .column-2 .container-buttons {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     
     margin-top: 20px;
 }
