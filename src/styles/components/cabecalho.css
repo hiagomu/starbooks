@@ -7,8 +7,13 @@ nav {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     font-family: Poppins;
+}
+
+.nav-sections {
+    display: flex;
 }
 
 .container-nav {
@@ -31,12 +36,14 @@ nav {
     margin: 0 5px 0 20px;
 }
 
-
-
 .img-logo {
     width: 42px;
     height: 42px;
 
+    margin-right: 20px;
+}
+
+.login {
     margin-right: 20px;
 }
 

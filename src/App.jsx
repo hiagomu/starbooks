@@ -7,6 +7,7 @@ import Rodape from './components/rodape';
 import Promo from './paginas/Promo';
 import Contato from './paginas/Contato';
 import Cadastro from './paginas/Cadastro';
+import CadastroConcluido from './paginas/CadastroConcluido';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path='/cadastro'>
             <Cadastro />
+          </Route>
+          <Route path='/sucesso'>
+            <CadastroConcluido />
           </Route>
           <Route path='/promocoes/:id'>
             <Promo />

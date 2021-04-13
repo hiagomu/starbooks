@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import firebase from '../data/Firebase'
 import '../styles/components/Cadastro.css'
 
@@ -6,11 +7,12 @@ function Cadastro() {
 
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    let history = useHistory();
 
     function cadastro() {
         firebase.auth().createUserWithEmailAndPassword(email, senha)
-            .then(user => {
-                console.log(user)
+            .then(() => {
+                history.push('/sucesso')
             })
     }
     
@@ -33,6 +35,7 @@ function Cadastro() {
                 value={email}
                 type="email"
                 name="email"
+                autocomplete="none"
                 placeholder="Digite seu email..."
             />
 

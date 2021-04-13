@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
+.container-concluido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Poppins;
+
+    height: 70vh;
+}
+
+.container-concluido h2 {
+    color: gold;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.container-concluido img {
+    width: 200px;
+    height: 200px;
+}
