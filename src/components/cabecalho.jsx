@@ -9,7 +9,7 @@ function Cabecalho() {
             <nav>
                 <div className="nav-sections">
                     <div className="container-nav">
-                        <img src={logo} className="img-logo-nav"/>
+                        <img src={logo} alt="StarBooks Logo" className="img-logo-nav"/>
                         <span>StarBooks</span>
                     </div>
                     <ul>
@@ -20,7 +20,7 @@ function Cabecalho() {
                 <Link className="menu-item login" to="/cadastro">Cadastro</Link>
             </nav>
             <h1>
-                <img src={logo} className="img-logo"/>
+                <img src={logo} alt="StarBooks Logo" className="img-logo"/>
                     StarBooks
             </h1>
         </header>

@@ -57,3 +57,11 @@
 .container-login button:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
+
+.container-login .texto-erro {
+    margin-top: 20px;
+    
+    color: red;
+    text-align: center;
+    font-size: 16px;
+}
