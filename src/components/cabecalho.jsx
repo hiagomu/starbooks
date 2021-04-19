@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/components/cabecalho.css'
 import logo from '../assets/starbooks.png'
 import { Link } from 'react-router-dom';
 
 function Cabecalho() {
+    
     return(
         <header>
             <nav>
@@ -17,7 +18,10 @@ function Cabecalho() {
                         <li><Link className="menu-item" to="/contato">Contato</Link></li>
                     </ul>
                 </div>
-                <Link className="menu-item login" to="/cadastro">Cadastro</Link>
+                <div>
+                    <Link className="menu-item login" to="/cadastro">Cadastro</Link>
+                    <Link className="menu-item login" to="/login">Login</Link>
+                </div>
             </nav>
             <h1>
                 <img src={logo} alt="StarBooks Logo" className="img-logo"/>

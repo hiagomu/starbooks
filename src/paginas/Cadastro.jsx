@@ -23,6 +23,7 @@ function Cadastro() {
                     nome: nome,
                     email: email
                 });
+                setErro("");
                 history.push('/sucesso');
             } catch(err) {
                 setErro("Erro: Email já cadastrado");
@@ -65,7 +66,7 @@ function Cadastro() {
     }
 
     return(
-        <main className="container-login">
+        <main className="container-cadastro">
 
             <h2>Cadastro</h2>
 

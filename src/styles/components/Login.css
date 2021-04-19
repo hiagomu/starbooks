@@ -1,4 +1,4 @@
-.container-cadastro {
+.container-login {
     background-color: rgba(51, 51, 51, 0.7);
     padding: 40px 20px;
 
@@ -9,12 +9,43 @@
     width: 65%;
 
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
+.poster-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.container-cadastro h2 {
+.poster-login img {
+    width: 300px;
+    height: 400px;
+}
+
+.poster-login p {
+    color: gold;
+    font-size: 20px;
+    text-align: center;
+
+    width: 80%;
+}
+
+.poster-login span {
+    color: black;
+    font-weight: bold;
+    background-color: gold;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 400px;
+}
+
+.form-login h2 {
     font-size: 32px;
     color: gold;
     text-align: center;
@@ -22,25 +53,25 @@
     margin-bottom: 40px;
 }
 
-.container-cadastro label {
+.form-login label {
     font-size: 20px;
     color: gold;
 
-    width: 80%;
+    width: 100%;
     margin: 0 auto 5px;
 }
 
-.container-cadastro input {
+.form-login input {
     font-size: 16px;
 
-    width: 80%;
+    width: 100%;
 
     border: 1px solid gold;
     padding: 5px;
     margin: 0 auto 20px;
 }
 
-.container-cadastro button {
+.form-login button {
     display: block;
     margin: 50px auto 0;
     padding: 8px 80px;
@@ -56,11 +87,11 @@
     cursor: pointer;
 }
 
-.container-cadastro button:hover {
+.form-login button:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.container-cadastro .texto-erro {
+.form-login .texto-erro {
     margin-top: 20px;
     
     color: red;
