@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import firebaseMethods from '../data/Firebase'
 import '../styles/components/Cadastro.css'
@@ -15,14 +15,23 @@ function Cadastro() {
     const db = firebaseMethods.db;
     let history = useHistory();
 
+    const user = firebase.auth().currentUser;
+
+    /*useEffect(() => {
+        if(user) {
+            history.push("/");
+        }
+    })*/
+
     async function cadastro() {
         if(validacoes) {
             try {
                 await firebase.auth().createUserWithEmailAndPassword(email, senha)
-                await db.collection("users").add({
+                /*await db.collection("newusers").add({
                     nome: nome,
                     email: email
                 });
+                */
                 setErro("");
                 history.push('/sucesso');
             } catch(err) {

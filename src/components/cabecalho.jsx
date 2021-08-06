@@ -1,9 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/components/cabecalho.css'
 import logo from '../assets/starbooks.png'
 import { Link } from 'react-router-dom';
+import firebaseMethods from '../data/Firebase'
 
 function Cabecalho() {
+
+    const firebase = firebaseMethods.firebase;
+    let user = firebase.auth().currentUser;
+
+    useEffect(() => {
+        console.log("User state changed!")
+    }, [user])
+
+    function logout() {
+        firebase.auth().signOut();
+    }
     
     return(
         <header>
@@ -18,10 +30,21 @@ function Cabecalho() {
                         <li><Link className="menu-item" to="/contato">Contato</Link></li>
                     </ul>
                 </div>
-                <div>
-                    <Link className="menu-item login" to="/cadastro">Cadastro</Link>
-                    <Link className="menu-item login" to="/login">Login</Link>
-                </div>
+
+                { user ? 
+                (
+                    <div>
+                        <Link className="menu-item login" onClick={logout}>Logout</Link>
+                    </div>
+                ) :
+                (
+                    <div>
+                        <Link className="menu-item login" to="/cadastro">Cadastro</Link>
+                        <Link className="menu-item login" to="/login">Login</Link>
+                    </div>
+                )
+                }
+                
             </nav>
             <h1>
                 <img src={logo} alt="StarBooks Logo" className="img-logo"/>

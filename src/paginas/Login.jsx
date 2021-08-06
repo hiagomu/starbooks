@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import firebaseMethods from '../data/Firebase'
 import '../styles/components/Login.css'
 import  image  from '../assets/books-back.svg'
+import { useHistory } from 'react-router';
 
 function Login() {
 
@@ -9,6 +10,15 @@ function Login() {
     const [email, setEmail] = useState("");
     const [erro, setErro] = useState("");
     const firebase = firebaseMethods.firebase;
+    const user = firebase.auth().currentUser;
+    let history = useHistory();
+
+    /*useEffect(() => {
+        if(user) {
+            history.push("/");
+        }
+    })*/
+
 
     function handlerWithEmail(event) {
         setEmail(event.target.value)
@@ -21,6 +31,7 @@ function Login() {
     async function login() {
         try {
             await firebase.auth().signInWithEmailAndPassword(email, senha);
+            history.push("/");
         } catch(error) {
             setErro("Erro: Email ou senha incorreto")
         }
