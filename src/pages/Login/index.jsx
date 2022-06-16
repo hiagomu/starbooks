@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import firebaseMethods from '../data/Firebase'
-import '../styles/components/Login.css'
-import  image  from '../assets/books-back.svg'
-import { useHistory } from 'react-router';
+import firebaseMethods from '../../data/Firebase'
+import '../Login/styles.css'
+import  image  from '../../assets/books-back.svg'
+import { useNavigate } from 'react-router';
 
-function Login() {
+export default function Login() {
 
     const [senha, setSenha] = useState("");
     const [email, setEmail] = useState("");
     const [erro, setErro] = useState("");
     const firebase = firebaseMethods.firebase;
-    const user = firebase.auth().currentUser;
-    let history = useHistory();
+    //const user = firebase.auth().currentUser;
+    const navigate = useNavigate();
 
     /*useEffect(() => {
         if(user) {
-            history.push("/");
+            navigate.push("/");
         }
     })*/
 
@@ -31,7 +31,7 @@ function Login() {
     async function login() {
         try {
             await firebase.auth().signInWithEmailAndPassword(email, senha);
-            history.push("/");
+            navigate("/");
         } catch(error) {
             setErro("Erro: Email ou senha incorreto")
         }
@@ -74,5 +74,3 @@ function Login() {
         </main>
     );
 }
-
-export default Login;

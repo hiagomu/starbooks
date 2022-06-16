@@ -1,4 +1,5 @@
-import firebase from 'firebase';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore/lite';
 
 const config = {
    apiKey: "AIzaSyCilfsdzxCma23TRwTXACANwfT2IV1UhpY",
@@ -9,10 +10,10 @@ const config = {
    appId: "1:506297006069:web:3717d1a9ca7aa8875312bc"
 };
 
-firebase.initializeApp(config);
+const app = initializeApp(config);
 
-const db = firebase.firestore();
+const db = getFirestore(app);
 
-const firebaseMethods = {firebase, db}
+const firebaseMethods = {app, db}
 
 export default firebaseMethods;

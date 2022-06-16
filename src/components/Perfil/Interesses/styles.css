@@ -1,0 +1,42 @@
+.container-promocoes-interesses {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+
+    margin: 2em 0 0 0;
+    padding: 0 1em;
+}
+
+.container-promocoes-interesses .promocoes-header, .interesses-header {
+    padding: 0.5em;
+    background-color: #77787a;
+    border-radius: 5px 5px 0 0;
+}
+
+.container-promocoes-interesses .minhas-promocoes, .meus-interesses {
+    background-color: rgba(51, 51, 51, 0.7);
+
+    padding: 0.5em;
+    height: 120px;
+
+    border-radius: 0 0 5px 5px;
+}
+
+.container-promocoes-interesses h3 {
+    color: white;
+    text-align: center;
+}
+
+.container-promocoes-perfil {
+    display: flex;
+    flex-direction: column;
+    
+    width: 600px;
+}
+    
+.container-interesses-perfil {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+}

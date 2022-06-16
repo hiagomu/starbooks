@@ -1,0 +1,43 @@
+.container-conquistas-social {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 1000px;
+
+    margin-top: 2em;
+    padding: 0 1em;
+}
+
+.container-conquistas-social h3 {
+    color: white;
+    text-align: center;
+}
+
+.container-conquistas-social .conquistas-header, .social-header {
+    padding: 0.5em;
+    background-color: #77787a;
+    border-radius: 5px 5px 0 0;
+}
+
+.container-conquistas-social .minhas-conquistas, .minhas-redes {
+    background-color: rgba(51, 51, 51, 0.7);
+
+    padding: 0.5em;
+    height: 120px;
+
+    border-radius: 0 0 5px 5px;
+}
+
+.container-conquistas {
+    display: flex;
+    flex-direction: column;
+    
+    width: 500px;
+}
+
+.container-social {
+    display: flex;
+    flex-direction: column;
+    
+    width: 200px;
+}

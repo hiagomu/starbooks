@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import '../styles/components/cabecalho.css'
-import logo from '../assets/starbooks.png'
+import React, { useEffect } from 'react'
+import '../Header/styles.css'
+import logo from '../../assets/starbooks.png'
 import { Link } from 'react-router-dom';
-import firebaseMethods from '../data/Firebase'
+import firebaseMethods from '../../data/Firebase'
 
-function Cabecalho() {
+export default function Header() {
 
-    const firebase = firebaseMethods.firebase;
-    let user = firebase.auth().currentUser;
+    const firebase = firebaseMethods.app;
+    //let user = firebase.auth().currentUser;
+    let user = ""
 
     useEffect(() => {
         console.log("User state changed!")
@@ -28,6 +29,7 @@ function Cabecalho() {
                     <ul>
                         <li><Link className="menu-item" to="/">Promoções</Link></li>
                         <li><Link className="menu-item" to="/contato">Contato</Link></li>
+                        <li><Link className="menu-item" to="/perfil">Perfil</Link></li>
                     </ul>
                 </div>
 
@@ -53,5 +55,3 @@ function Cabecalho() {
         </header>
     );
 }
-
-export default Cabecalho;

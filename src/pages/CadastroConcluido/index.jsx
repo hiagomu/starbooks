@@ -1,8 +1,8 @@
 import React from 'react';
-import img from '../assets/concluido.png'
-import '../styles/components/CadastroConcluido.css'
+import img from '../../assets/concluido.png'
+import '../CadastroConcluido/styles.css'
 
-function CadastroConcluido() {
+export default function CadastroConcluido() {
     return(
         <main className="container-concluido">
             <h2>Cadastrado com sucesso!</h2>
@@ -10,5 +10,3 @@ function CadastroConcluido() {
         </main>
     );
 }
-
-export default CadastroConcluido;

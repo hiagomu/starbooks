@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/components/ListPromos.css'
+import '../Home/styles.css'
 import { Link } from 'react-router-dom';
-import { busca } from '../api/api';
+import { busca } from '../../api/api';
 
-function ListPromos() {
+export default function Home() {
 
     const [promos, setPromos] = useState([])
 
@@ -44,5 +44,3 @@ function ListPromos() {
         </main>
     );
 }
-
-export default ListPromos;

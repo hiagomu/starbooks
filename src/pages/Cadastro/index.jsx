@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
-import firebaseMethods from '../data/Firebase'
-import '../styles/components/Cadastro.css'
+import { useNavigate } from 'react-router';
+import { AuthContext } from '../../providers/auth';
+import firebaseMethods from '../../data/Firebase'
+import '../Cadastro/styles.css'
 
-function Cadastro() {
+export default function Cadastro() {
 
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
@@ -13,16 +14,21 @@ function Cadastro() {
     const [validacoes, setValidacoes] = useState(false);
     const firebase = firebaseMethods.firebase;
     const db = firebaseMethods.db;
-    let history = useHistory();
+    const navigate = useNavigate();
 
-    const user = firebase.auth().currentUser;
+    const { user, setUser } = React.useContext(AuthContext);
+    //const currentUser = firebase.auth().currentUser;
 
     /*useEffect(() => {
         if(user) {
-            history.push("/");
+            navigate("/");
         }
     })*/
 
+    //console.log(currentUser.refreshToken)
+    setUser("Raul");
+    console.log(user);
+    
     async function cadastro() {
         if(validacoes) {
             try {
@@ -32,9 +38,13 @@ function Cadastro() {
                     email: email
                 });
                 */
+                setUser("Raul");
+                console.log(user)
+                //console.log(currentUser.refreshToken)
                 setErro("");
-                history.push('/sucesso');
+                navigate('/sucesso');
             } catch(err) {
+                console.log("erro");
                 setErro("Erro: Email já cadastrado");
             }
         }
@@ -124,5 +134,3 @@ function Cadastro() {
         </main>
     );
 }
-
-export default Cadastro;

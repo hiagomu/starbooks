@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/components/Contato.css'
+import '../Contato/styles.css'
 
-function Contato() {
+export default function Contato() {
 
 
     const [nome, setNome] = useState("");
@@ -70,5 +70,3 @@ function Contato() {
         </main>
     );
 }
-
-export default Contato;

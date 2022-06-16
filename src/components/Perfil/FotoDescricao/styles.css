@@ -1,0 +1,26 @@
+.container-foto-desc {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+
+    padding: 1em 0;
+}
+
+.container-foto-desc img {
+    width: 160px;
+    height: 160px;
+}
+
+.container-nome-descricao {
+    width: 760px;
+}
+
+.container-nome-descricao h2 {
+    color: gold;
+    font-size: 32px;
+}
+
+.container-nome-descricao p {
+    margin: 1em 0 0 0;
+    color: white;
+}

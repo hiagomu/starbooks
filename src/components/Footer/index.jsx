@@ -1,12 +1,10 @@
 import React from 'react';
-import '../styles/components/rodape.css'
+import '../Footer/styles.css'
 
-function Rodape() {
+export default function Footer() {
     return(
         <footer>
             ⭐ Made by @hiagomux ⭐
         </footer>
     );
 }
-
-export default Rodape;

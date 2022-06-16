@@ -1,42 +1,35 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
-import Cabecalho from './components/cabecalho';
-import ListPromos from './paginas/ListPromos';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import './styles/base/_base.css'
-import Rodape from './components/rodape';
-import Promo from './paginas/Promo';
-import Contato from './paginas/Contato';
-import Cadastro from './paginas/Cadastro';
-import CadastroConcluido from './paginas/CadastroConcluido';
-import Login from './paginas/Login';
+import './styles/_base.css'
+
+import Header from './components/Header/index';
+import Footer from './components/Footer/index';
+import Home from './pages/Home/index';
+import Cadastro from './pages/Cadastro/index';
+import CadastroConcluido from './pages/CadastroConcluido/index';
+import Contato from './pages/Contato/index';
+import Login from './pages/Login/index';
+import Perfil from './pages/Perfil/index';
+import Promocao from './pages/Promocao/index';
+
 
 function App() {
 
   return (
     <Router>
-      <Cabecalho />
+      <Header />
       <div className='container'>
-        <Switch>
-          <Route exact path='/'>
-            <ListPromos />
-          </Route>
-          <Route path='/contato'>
-            <Contato />
-          </Route>
-          <Route path='/cadastro'>
-            <Cadastro />
-          </Route>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <Route path='/sucesso'>
-            <CadastroConcluido />
-          </Route>
-          <Route path='/promocoes/:id'>
-            <Promo />
-          </Route>
-        </Switch>
-        <Rodape />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sucesso" element={<CadastroConcluido />} />
+          <Route path="/promocoes/:id" element={<Promocao />} />
+          <Route path="/perfil" element={<Perfil />} />
+        </Routes>
+      <Footer />
       </div>
     </Router>
   );

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { busca } from '../api/api';
-import '../styles/components/Promo.css'
+import { busca } from '../../api/api';
+import '../Promocao/styles.css'
 
-function Promo() {
+export default function Promocao() {
 
     const [promo, setPromo] = useState({});
     const {id} = useParams();
@@ -51,5 +51,3 @@ function Promo() {
         </main>
     );
 }
-
-export default Promo;
