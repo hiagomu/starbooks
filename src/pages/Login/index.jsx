@@ -10,8 +10,8 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [erro, setErro] = useState("");
     const firebase = firebaseMethods.firebase;
-    //const user = firebase.auth().currentUser;
     const navigate = useNavigate();
+    //const user = firebase.auth().currentUser;
 
     /*useEffect(() => {
         if(user) {

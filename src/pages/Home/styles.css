@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
 
+.input-busca {
+    width: 420px;
+    height: 36px;
+
+    padding: 10px 5px;
+    margin: 0 0 20px 0;
+
+    border-radius: 5px;
+    border: 1px solid gold;
+}
+
 .container-promocoes {
     width: 100%;
     display: flex;
