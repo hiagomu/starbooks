@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: rgba(30, 30, 30, 0.99);
+  background-color: #fff;
 
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ code {
 }
 
 .container {
-  width: 80vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
